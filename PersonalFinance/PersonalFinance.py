@@ -1,4 +1,5 @@
 class PersonalFinance:
+    # TODO: add fiscal return variance calculations
     def __init__(self):
         pass
 

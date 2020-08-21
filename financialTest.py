@@ -2,6 +2,7 @@ from PersonalFinance import PersonalFinance
 import pandas as pd
 import matplotlib.pyplot as plt
 import random
+# TODO: get historic S&P 500 to calculate variance and derive standard dev by taking sqrt
 
 
 def main():
@@ -24,7 +25,7 @@ def main():
         future_value_avg = PersonalFinance.compound(principal, rate_avg, year, contribution)
         future_value_low = PersonalFinance.compound(principal, rate_low, year, contribution)
         future_value_high = PersonalFinance.compound(principal, rate_high, year, contribution)
-        rand_rate = random.normalvariate(rate_avg, 0.008)
+        rand_rate = random.normalvariate(rate_avg, 0.002)
         future_value_rand = PersonalFinance.compound(principal, rand_rate, year, contribution)
 
         print("After {} year(s), you will have ${:.2f} saved. (rand={})".format(year, future_value_avg, rand_rate))
